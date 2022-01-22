@@ -39,7 +39,7 @@ class _ShowCuacaState extends State<ShowCuaca> {
                   Container(
                     width: MediaQuery.of(context).size.width * 0.3,
                     child: Image.network(
-                      "http://openweathermap.org/img/wn/${item.icon}@2x.png",
+                      "http://openweathermap.org/img/wn/${item.icon!.replaceAll("n", "d")}@2x.png",
                       fit: BoxFit.contain,
                     ),
                   ),

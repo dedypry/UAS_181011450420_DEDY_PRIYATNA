@@ -35,13 +35,14 @@ class _ShowCuacaState extends State<ShowCuaca> {
                 //             "http://openweathermap.org/img/wn/${data.cuaca!.weather![index].icon}@2x.png");
                 //       }),
                 // )
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.3,
-                  child: Image.network(
-                    "http://openweathermap.org/img/wn/${data.cuaca!.weather![0].icon}@2x.png",
-                    fit: BoxFit.contain,
+                for (var item in data.cuaca!.weather!)
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    child: Image.network(
+                      "http://openweathermap.org/img/wn/${item.icon}@2x.png",
+                      fit: BoxFit.contain,
+                    ),
                   ),
-                ),
                 Text(data.cuaca!.weather![0].description!),
                 SizedBox(height: 30),
                 TextContainer(

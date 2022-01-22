@@ -16,7 +16,8 @@ class CuacaController extends GetxController {
     }).catchError((error) {
       print("error ini");
       Get.snackbar(
-          "Data tidak Ditemukan", "pastikan data yang kamu ketik benar");
+          "Data tidak Ditemukan", "pastikan data yang kamu ketik benar",
+          backgroundColor: Colors.red.shade400);
     });
   }
 

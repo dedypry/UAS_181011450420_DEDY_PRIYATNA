@@ -47,7 +47,10 @@ class _ShowCuacaState extends State<ShowCuaca> {
                 SizedBox(height: 30),
                 TextContainer(
                     title: "Suhu",
-                    value: data.cuaca!.main!.temp.toString() + " F"),
+                    value: (data.cuaca!.main!.temp!.toDouble() - 275.15)
+                            .ceil()
+                            .toString() +
+                        "`C"),
                 TextContainer(
                     title: "Kecepatan Angin",
                     value: data.cuaca!.wind!.speed.toString() + " Km/Jam"),

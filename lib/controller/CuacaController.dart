@@ -13,6 +13,10 @@ class CuacaController extends GetxController {
       print(value.toString());
       cuaca = value;
       update();
+    }).catchError((error) {
+      print("error ini");
+      Get.snackbar(
+          "Data tidak Ditemukan", "pastikan data yang kamu ketik benar");
     });
   }
 

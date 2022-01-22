@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:uas_dedy_priyatna/pages/Cuaca.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,7 +7,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Uas Mobile Programing',
       theme: ThemeData(
